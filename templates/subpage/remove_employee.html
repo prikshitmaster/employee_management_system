@@ -1,0 +1,10 @@
+{% include 'index.html' %}
+
+{% block content %}
+    <form method="post" action="">
+    {% csrf_token %}
+    <h5>Are you Sure to Delete</h5>
+    <button type="submit"> Delete</button>
+    <a href={% url 'all-employes' %}> cancel</a>
+    </form>
+{% endblock %}

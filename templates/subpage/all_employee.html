@@ -1,0 +1,71 @@
+{% include 'index.html' %}
+
+{% block content %}
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+        <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Dept</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Bonus</th>
+            <th>Phone</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for employe_detail in employe_detail %}
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img
+                                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                alt=""
+                                style="width: 45px; height: 45px"
+                                class="rounded-circle"
+                        />
+                        <div class="ms-3">
+                            <p class="fw-bold mb-1">{{ employe_detail.fullname }}</p>
+                            <p class="text-muted mb-0">{{ employe_detail.email }}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <p class="fw-normal mb-1">{{ employe_detail.role }}</p>
+                    <p class="text-muted mb-0">{{ employe_detail.dept }} department</p>
+                </td>
+                <td>
+                    <span class="badge badge-success rounded-pill d-inline">Active</span>
+                </td>
+                <td>{{ employe_detail.role }}</td>
+                <td>
+                    <p class="text-muted mb-0">{{ employe_detail.salary }} </p>
+
+
+                </td>
+                <td>
+                    <p class="text-muted mb-0">{{ employe_detail.bonus }} </p>
+
+
+                </td>
+                <td>
+                    <p class="text-muted mb-0">{{ employe_detail.phone }} </p>
+
+
+                </td>
+
+                <td>
+                    <a class="" href="{% url 'remove-employes' employe_detail.id %}"> delete </a>
+
+                </td>
+            </tr>
+            <tr>
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

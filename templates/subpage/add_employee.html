@@ -1,0 +1,19 @@
+{% include 'index.html' %}
+
+{% block content %}
+
+<form action="" method="post">
+{% csrf_token %}
+  <!-- Name input -->
+
+
+{{ form.as_p }}
+  <!-- Submit button -->
+    <button type="submit" > Submit</button>
+
+</form>
+
+
+
+
+{% endblock %}

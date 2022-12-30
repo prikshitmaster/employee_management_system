@@ -1,0 +1,13 @@
+{% include 'index.html' %}
+{% block content %}
+
+    <div class="d-flex justify-content-center ">
+    <!-- Header option -->
+    <a class="btn btn-primary text-white" href="{% url 'all-employes' %}">View All Employee</a>&nbsp;&nbsp;
+    <a class="btn btn-primary text-white" href="{% url 'add-employes' %}">Add A Employee</a>&nbsp;&nbsp;
+    <a class="btn btn-primary text-white"  href="{% url 'all-employes'  %}">Remove A Employee</a>&nbsp;&nbsp;
+    <a class="btn btn-primary text-white"  href="{% url 'filter-employes' %}">Filter Employee Detail</a>&nbsp;&nbsp;
+    <!-- Header option end -->
+    </div>
+
+{% endblock %}
